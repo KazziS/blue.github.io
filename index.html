@@ -37,8 +37,8 @@
   <header class="bg-blue-900 text-white py-16 shadow-lg animate-fadeIn">
     <div class="max-w-5xl mx-auto text-center">
       <h1 class="text-5xl font-extrabold tracking-tight animate-slideUp">Passang Kazi Sherpa</h1>
-      <p class="text-xl mt-4 animate-slideUp">System/Network Administrator</p>
-      <div class="mt-2 text-base animate-slideUp">📍 Kathmandu, Nepal | 📧 <a href="mailto:kazzisherpa@gmail.com" class="underline">kazzisherpa@gmail.com</a> | 📞 +977 98****2242</div>
+      <p class="text-xl mt-4 animate-slideUp">System / Network IT Administrator</p>
+      <div class="mt-2 text-base animate-slideUp">📍 Kathmandu, Nepal | 📧 <a href="mailto:kazzisherpa@gmail.com" class="underline">kazzisherpa@gmail.com</a> | 📞 +977 9823142242</div>
     </div>
   </header>
 
@@ -79,25 +79,43 @@
 
   <section class="max-w-4xl mx-auto px-6 py-12 animate-fadeIn">
     <h2 class="text-3xl font-bold mb-4 text-blue-900">Get In Touch</h2>
-    <form class="bg-white p-6 rounded-lg shadow space-y-4">
+    <form action="https://formspree.io/f/movdaenv" method="POST" class="bg-white p-6 rounded-lg shadow space-y-4">
       <div>
         <label class="block font-semibold mb-1">Name</label>
-        <input type="text" class="w-full border border-gray-300 p-2 rounded" placeholder="Your Name" />
+        <input type="text" name="name" required class="w-full border border-gray-300 p-2 rounded" placeholder="Your Name" />
       </div>
       <div>
         <label class="block font-semibold mb-1">Email</label>
-        <input type="email" class="w-full border border-gray-300 p-2 rounded" placeholder="Your Email" />
+        <input type="email" name="email" required class="w-full border border-gray-300 p-2 rounded" placeholder="Your Email" />
       </div>
       <div>
         <label class="block font-semibold mb-1">Message</label>
-        <textarea class="w-full border border-gray-300 p-2 rounded" rows="4" placeholder="How can I help you?"></textarea>
+        <textarea name="message" required class="w-full border border-gray-300 p-2 rounded" rows="4" placeholder="How can I help you?"></textarea>
       </div>
       <button type="submit" class="bg-blue-800 text-white px-6 py-2 rounded hover:bg-blue-700 transition">Send Message</button>
     </form>
+    <p class="text-green-600 mt-4 hidden" id="thank-you">Thank you for your message!</p>
   </section>
 
   <footer class="bg-blue-900 text-white text-center py-6 animate-fadeIn">
     <p class="text-sm">&copy; 2025 Passang Kazi Sherpa — All rights reserved</p>
   </footer>
+
+  <script>
+    const form = document.querySelector('form');
+    const thankYou = document.getElementById('thank-you');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const res = await fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        form.reset();
+        thankYou.classList.remove('hidden');
+      }
+    });
+  </script>
 </body>
 </html>
