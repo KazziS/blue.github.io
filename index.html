@@ -5,75 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Passang Kazi Sherpa — IT Services</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          animation: {
+            fadeIn: 'fadeIn 2s ease-in forwards',
+            slideUp: 'slideUp 1.5s ease-out forwards',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: 0 },
+              '100%': { opacity: 1 },
+            },
+            slideUp: {
+              '0%': { opacity: 0, transform: 'translateY(20px)' },
+              '100%': { opacity: 1, transform: 'translateY(0)' },
+            },
+          },
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
-  <header class="bg-blue-800 text-white p-6">
-    <div class="max-w-4xl mx-auto text-center">
-      <h1 class="text-4xl font-bold">Passang Kazi Sherpa</h1>
-      <p class="text-lg mt-2">System / Network IT Administrator</p>
-      <p class="mt-2">📍 Kathmandu, Nepal | 📧 kazzisherpa@gmail.com | 📞 +977 9823142242</p>
+<body class="bg-gradient-to-br from-blue-100 to-white text-gray-800 font-sans">
+  <header class="bg-blue-900 text-white py-16 shadow-lg animate-fadeIn">
+    <div class="max-w-5xl mx-auto text-center">
+      <h1 class="text-5xl font-extrabold tracking-tight animate-slideUp">Passang Kazi Sherpa</h1>
+      <p class="text-xl mt-4 animate-slideUp">System / Network IT Administrator</p>
+      <div class="mt-2 text-base animate-slideUp">📍 Kathmandu, Nepal | 📧 <a href="mailto:kazzisherpa@gmail.com" class="underline">kazzisherpa@gmail.com</a> | 📞 +977 9823142242</div>
     </div>
   </header>
 
-  <section class="max-w-4xl mx-auto p-6">
-    <h2 class="text-2xl font-semibold mb-2">About Me</h2>
-    <p>
-      Dedicated IT System and Network Administrator with a strong passion for technology,
-      security and innovation. I bring extensive experience managing IT infrastructure and am
-      constantly exploring new ways to enhance performance and security.
+  <section class="max-w-4xl mx-auto px-6 py-12 animate-fadeIn">
+    <h2 class="text-3xl font-bold mb-4 text-blue-900">About Me</h2>
+    <p class="text-lg leading-relaxed bg-white p-6 rounded-lg shadow-md transition duration-300 hover:shadow-xl">
+      I'm a dedicated IT System and Network Administrator passionate about technology, security, and innovation. I enjoy building and maintaining reliable infrastructure while exploring new technologies to optimize performance and security. I'm committed to helping businesses run smoothly and securely.
     </p>
   </section>
 
-  <section class="max-w-4xl mx-auto p-6">
-    <h2 class="text-2xl font-semibold mb-2">Core Skills</h2>
-    <ul class="grid grid-cols-2 gap-2 list-disc list-inside">
-      <li>Network & System Administration</li>
-      <li>IT Security</li>
-      <li>VoIP Systems</li>
-      <li>Linux & Virtualization</li>
-      <li>System Scripting</li>
-      <li>Asset Management</li>
-      <li>Documentation</li>
-    </ul>
+  <section class="max-w-4xl mx-auto px-6 py-12 animate-fadeIn">
+    <h2 class="text-3xl font-bold mb-6 text-blue-900">Core Skills</h2>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-4 text-lg">
+      <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition-transform">✔️ Network & System Administration</div>
+      <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition-transform">✔️ IT Security</div>
+      <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition-transform">✔️ VoIP Systems</div>
+      <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition-transform">✔️ Linux & Virtualization</div>
+      <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition-transform">✔️ Asset Management</div>
+      <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition-transform">✔️ Scripting & Automation</div>
+      <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition-transform">✔️ IT Documentation</div>
+      <div class="bg-white p-4 rounded-lg shadow hover:scale-105 transition-transform">✔️ Adaptability & Problem Solving</div>
+    </div>
   </section>
 
-  <section class="max-w-4xl mx-auto p-6">
-    <h2 class="text-2xl font-semibold mb-2">IT Services Offered</h2>
-    <ul class="list-disc list-inside">
-      <li>System/Network Design & Troubleshooting</li>
-      <li>VoIP Setup & Support</li>
-      <li>Linux Server Maintenance</li>
-      <li>IT Infrastructure Consulting</li>
-      <li>Cybersecurity Assessment</li>
-    </ul>
+  <section class="bg-blue-50 py-12 animate-fadeIn">
+    <div class="max-w-4xl mx-auto px-6">
+      <h2 class="text-3xl font-bold mb-6 text-blue-900">IT Services Offered</h2>
+      <ul class="grid grid-cols-1 md:grid-cols-2 gap-4 text-lg">
+        <li class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">🛠️ System/Network Design & Troubleshooting</li>
+        <li class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">📞 VoIP Setup & Support</li>
+        <li class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">🐧 Linux Server Maintenance</li>
+        <li class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">🔒 Cybersecurity Hardening & Audits</li>
+        <li class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">🧠 IT Infrastructure Consulting</li>
+        <li class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition">🖥️ Remote IT Support & Maintenance</li>
+      </ul>
+    </div>
   </section>
 
-  <section class="max-w-4xl mx-auto p-6">
-    <h2 class="text-2xl font-semibold mb-2">Work Experience</h2>
-    <ul class="space-y-4">
-      <li>
-        <strong>Ebpearls</strong> – IT Officer (2023–Present)<br />
-        Managing IT support, system monitoring, and infrastructure upgrades.
-      </li>
-      <li>
-        <strong>Triveni Byapar Company</strong> – Sr IT Officer (2022–2023)<br />
-        Oversaw network infrastructure, security, training, and vendor relations.
-      </li>
-      <li>
-        <strong>VoxCrow</strong> – IT Support Officer (2021–2022)<br />
-        Provided VoIP support, documented procedures, and maintained system security.
-      </li>
-    </ul>
-  </section>
-
-  <section class="max-w-4xl mx-auto p-6">
-    <h2 class="text-2xl font-semibold mb-2">Education</h2>
-    <p><strong>London Metropolitan University</strong><br />BSc in Computer Network & IT Security – First Class Honours (2017–2020)</p>
-    <p><strong>Kendriya Vidyalaya</strong><br />Science (2015–2017), 76%</p>
-  </section>
-
-  <footer class="bg-gray-800 text-white p-4 text-center">
-    &copy; 2025 Passang Kazi Sherpa — All rights reserved
+  <footer class="bg-blue-900 text-white text-center py-6 animate-fadeIn">
+    <p class="text-sm">&copy; 2025 Passang Kazi Sherpa — All rights reserved</p>
   </footer>
 </body>
 </html>
